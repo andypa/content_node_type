@@ -41,3 +41,162 @@ $GLOBALS['TCA']['tt_content']['types']['fluidcontent_content']['showitem'] = '
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access,
         --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.extended
 ';
+
+
+$GLOBALS['TCA']['tt_content']['types']['header']['showitem'] = '
+		--div--;Properties,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.headers;headers,
+        --div--;Common Properties,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.frames;frames,
+        --div--;Content Node Properties,
+               --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
+		        rowDescription,
+        --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access,
+        --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.extended
+';
+
+$GLOBALS['TCA']['tt_content']['types']['text']['showitem'] = '
+		--div--;Properties,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.header;header,
+                bodytext;LLL:EXT:cms/locallang_ttc.xlf:bodytext_formlabel;;richtext:rte_transform[flag=rte_enabled|mode=ts_css],
+                rte_enabled;LLL:EXT:cms/locallang_ttc.xlf:rte_enabled_formlabel,
+        --div--;Common Properties,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.frames;frames,
+        --div--;Content Node Properties,
+               --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
+		       rowDescription,
+        --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access,
+        --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.extended
+';
+
+$GLOBALS['TCA']['tt_content']['types']['image']['showitem'] = '
+		--div--;Properties,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.header;header,
+                image,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.imagelinks;imagelinks,
+	    --div--;Common Properties,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.frames;frames,
+        --div--;Content Node Properties,
+               --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
+		       rowDescription,
+        --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access,
+        --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.extended
+';
+
+$GLOBALS['TCA']['tt_content']['types']['bullets']['showitem'] = '
+		--div--;Properties,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.header;header,
+                bodytext;LLL:EXT:cms/locallang_ttc.xlf:bodytext.ALT.bulletlist_formlabel;;nowrap,
+		--div--;Common Properties,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.frames;frames,
+        --div--;Content Node Properties,
+               --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
+		        rowDescription,
+        --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access,
+        --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.extended
+';
+
+$GLOBALS['TCA']['tt_content']['types']['table']['showitem'] = '
+		--div--;Properties,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.header;header,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.table_layout;tablelayout,
+                layout;;10,
+                cols,
+                bodytext;;9;nowrap:wizards[table],
+                pi_flexform,
+		--div--;Common Properties,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.frames;frames,
+        --div--;Content Node Properties,
+               --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
+		       rowDescription,
+        --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access,
+        --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.extended
+';
+
+$GLOBALS['TCA']['tt_content']['types']['uploads']['showitem'] = '
+		--div--;Properties,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.header;header,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:media;uploads,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.uploads_layout;uploadslayout,
+		--div--;Common Properties,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.frames;frames,
+        --div--;Content Node Properties,
+               --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
+		       rowDescription,
+        --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access,
+        --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.extended
+';
+
+$GLOBALS['TCA']['tt_content']['types']['menu']['showitem'] = '
+		--div--;Properties,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.header;header,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.menu;menu,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.menu_accessibility;menu_accessibility,
+		--div--;Common Properties,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.frames;frames,
+        --div--;Content Node Properties,
+               --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
+		        rowDescription,
+        --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access,
+        --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.extended
+';
+
+$GLOBALS['TCA']['tt_content']['types']['shortcut']['showitem'] = '
+		--div--;Properties,
+                header;LLL:EXT:cms/locallang_ttc.xlf:header.ALT.shortcut_formlabel,
+                records;LLL:EXT:cms/locallang_ttc.xlf:records_formlabel,
+		--div--;Common Properties,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.frames;frames,
+        --div--;Content Node Properties,
+               --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
+		        rowDescription,
+        --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access,
+        --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.extended
+';
+
+
+
+$GLOBALS['TCA']['tt_content']['types']['div']['showitem'] = '
+		--div--;Properties,
+                header;LLL:EXT:cms/locallang_ttc.xlf:header.ALT.div_formlabel,
+		--div--;Common Properties,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.frames;frames,
+        --div--;Content Node Properties,
+               --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
+		        rowDescription,
+        --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access,
+        --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.extended
+';
+
+$GLOBALS['TCA']['tt_content']['types']['html']['showitem'] = '
+		--div--;Properties,
+                header;LLL:EXT:cms/locallang_ttc.xlf:header.ALT.html_formlabel,
+                bodytext,
+		--div--;Common Properties,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.frames;frames,
+        --div--;Content Node Properties,
+               --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
+		         rowDescription,
+        --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access,
+        --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.extended
+';
