@@ -3,10 +3,9 @@ if (!defined('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-
-$GLOBALS['TCA']['tt_content']['ctrl']['formattedLabel_userFunc'] = \SimpleTYPO3\ContentNodeType\Hooks\Labels::class . '->propertiesBasedTitle';
-
-$GLOBALS['TCA']['tt_content']['ctrl']['label_userFunc'] = \SimpleTYPO3\ContentNodeType\Hooks\Labels::class . '->propertiesBasedTitle';
+//$GLOBALS['TCA']['tt_content']['ctrl']['formattedLabel_userFunc'] = \SimpleTYPO3\ContentNodeType\Hooks\Labels::class . '->propertiesBasedTitle';
+//
+//$GLOBALS['TCA']['tt_content']['ctrl']['label_userFunc'] = \SimpleTYPO3\ContentNodeType\Hooks\Labels::class . '->propertiesBasedTitle';
 
 
 $GLOBALS['TCA']['tt_content']['types']['list']['showitem'] = '
@@ -19,7 +18,7 @@ $GLOBALS['TCA']['tt_content']['types']['list']['showitem'] = '
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.frames;frames,
         --div--;Content Node Properties,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
-		        --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,rowDescription,
+		        --palette--;Content element Key;headers,
         --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access,
@@ -34,8 +33,8 @@ $GLOBALS['TCA']['tt_content']['types']['fluidcontent_content']['showitem'] = '
         --div--;Common Properties,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.frames;frames,
         --div--;Content Node Properties,
-               --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
-		        --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,rowDescription,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
+		        --palette--;Content element Key;headers,
         --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access,
@@ -49,8 +48,8 @@ $GLOBALS['TCA']['tt_content']['types']['header']['showitem'] = '
         --div--;Common Properties,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.frames;frames,
         --div--;Content Node Properties,
-               --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
-		        rowDescription,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
+		       	--palette--;Content element Key;headers,
         --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access,
@@ -59,14 +58,13 @@ $GLOBALS['TCA']['tt_content']['types']['header']['showitem'] = '
 
 $GLOBALS['TCA']['tt_content']['types']['text']['showitem'] = '
 		--div--;Properties,
-                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.header;header,
                 bodytext;LLL:EXT:cms/locallang_ttc.xlf:bodytext_formlabel;;richtext:rte_transform[flag=rte_enabled|mode=ts_css],
                 rte_enabled;LLL:EXT:cms/locallang_ttc.xlf:rte_enabled_formlabel,
         --div--;Common Properties,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.frames;frames,
         --div--;Content Node Properties,
-               --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
-		       rowDescription,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
+		      	--palette--;Content element Key;headers,
         --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access,
@@ -75,14 +73,13 @@ $GLOBALS['TCA']['tt_content']['types']['text']['showitem'] = '
 
 $GLOBALS['TCA']['tt_content']['types']['image']['showitem'] = '
 		--div--;Properties,
-                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.header;header,
                 image,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.imagelinks;imagelinks,
 	    --div--;Common Properties,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.frames;frames,
         --div--;Content Node Properties,
-               --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
-		       rowDescription,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
+		      	--palette--;Content element Key;headers,
         --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access,
@@ -91,13 +88,12 @@ $GLOBALS['TCA']['tt_content']['types']['image']['showitem'] = '
 
 $GLOBALS['TCA']['tt_content']['types']['bullets']['showitem'] = '
 		--div--;Properties,
-                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.header;header,
                 bodytext;LLL:EXT:cms/locallang_ttc.xlf:bodytext.ALT.bulletlist_formlabel;;nowrap,
 		--div--;Common Properties,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.frames;frames,
         --div--;Content Node Properties,
-               --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
-		        rowDescription,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
+		        --palette--;Content element Key;headers,
         --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access,
@@ -106,7 +102,6 @@ $GLOBALS['TCA']['tt_content']['types']['bullets']['showitem'] = '
 
 $GLOBALS['TCA']['tt_content']['types']['table']['showitem'] = '
 		--div--;Properties,
-                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.header;header,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.table_layout;tablelayout,
                 layout;;10,
                 cols,
@@ -115,8 +110,8 @@ $GLOBALS['TCA']['tt_content']['types']['table']['showitem'] = '
 		--div--;Common Properties,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.frames;frames,
         --div--;Content Node Properties,
-               --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
-		       rowDescription,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
+		        --palette--;Content element Key;headers,
         --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access,
@@ -125,14 +120,13 @@ $GLOBALS['TCA']['tt_content']['types']['table']['showitem'] = '
 
 $GLOBALS['TCA']['tt_content']['types']['uploads']['showitem'] = '
 		--div--;Properties,
-                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.header;header,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:media;uploads,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.uploads_layout;uploadslayout,
 		--div--;Common Properties,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.frames;frames,
         --div--;Content Node Properties,
-               --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
-		       rowDescription,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
+			    --palette--;Content element Key;headers,
         --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access,
@@ -141,14 +135,13 @@ $GLOBALS['TCA']['tt_content']['types']['uploads']['showitem'] = '
 
 $GLOBALS['TCA']['tt_content']['types']['menu']['showitem'] = '
 		--div--;Properties,
-                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.header;header,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.menu;menu,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.menu_accessibility;menu_accessibility,
 		--div--;Common Properties,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.frames;frames,
         --div--;Content Node Properties,
                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
-		        rowDescription,
+		       --palette--;Content element Key;headers,
         --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access,
@@ -160,10 +153,10 @@ $GLOBALS['TCA']['tt_content']['types']['shortcut']['showitem'] = '
                 header;LLL:EXT:cms/locallang_ttc.xlf:header.ALT.shortcut_formlabel,
                 records;LLL:EXT:cms/locallang_ttc.xlf:records_formlabel,
 		--div--;Common Properties,
-                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.frames;frames,
+               --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.frames;frames,
         --div--;Content Node Properties,
                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
-		        rowDescription,
+		       --palette--;Content element Key;headers,
         --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access,
@@ -179,7 +172,7 @@ $GLOBALS['TCA']['tt_content']['types']['div']['showitem'] = '
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.frames;frames,
         --div--;Content Node Properties,
                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
-		        rowDescription,
+		       --palette--;Content element Key;headers,
         --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access,
@@ -194,7 +187,7 @@ $GLOBALS['TCA']['tt_content']['types']['html']['showitem'] = '
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.frames;frames,
         --div--;Content Node Properties,
                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
-		         rowDescription,
+		       --palette--;Content element Key;headers,
         --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access,

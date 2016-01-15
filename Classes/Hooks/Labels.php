@@ -37,11 +37,7 @@ class Labels extends CoreContentController
         if (false === is_null($record)) {
             $this->initializeViewVariables($record);
             $pop = $record['header'];
-            $pop .= empty($pop) ? ' ' : ' | ';
-            $pop .= reset($this->settings);
-            list(, $type) = explode(':', $record['tx_fed_fcefile']);
-            $type = reset(explode('.', $type));
-            $parameters['title'] = $type.'[Uid: '.$record['uid'].'] '.(empty($pop) ? ' ->' : '').$pop;
+			$parameters['title'] = json_encode($this->settings);// $type.'[Uid: '.$record['uid'].'] '.(empty($pop) ? ' ->' : '').$pop;
         }
     }
 }
