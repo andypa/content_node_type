@@ -73,12 +73,9 @@ $GLOBALS['TCA']['tt_content']['types']['bullets']['showitem'] = '
 $GLOBALS['TCA']['tt_content']['types']['table']['showitem'] = '
 		--div--;Properties,
 				--palette--;;key_line,
-                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.table_layout;tablelayout,
-                layout;;10,
-                cols,
                 bodytext;;9;nowrap:wizards[table],
-                pi_flexform,
 '.$common;
+
 
 $GLOBALS['TCA']['tt_content']['types']['uploads']['showitem'] = '
 		--div--;Properties,
