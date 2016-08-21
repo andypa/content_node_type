@@ -35,7 +35,8 @@ $EM_CONF[$_EXTKEY] = array(
 	'constraints' => array(
 		'depends' => array(
 			'typo3' => '*',
-			'fluidcontent_core' => '*',
+			'fluidcontent_core' => '*',			
+			'fluidcontent' => '*',
 		),
 		'conflicts' => array(
 			'css_styled_content' => ''
